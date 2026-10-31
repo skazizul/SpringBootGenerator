@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.skazizul.springbootgenerator</id>
+    <name>Spring Boot Generator</name>
+    <vendor email="support@example.com">Sk Azizul Hosen</vendor>
+
+    <description><![CDATA[
+        Generates Spring Boot Controller, Service, Repository and DTO classes
+        from a selected Java entity. Initial development version.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+
+    <actions>
+        <action id="com.skazizul.springbootgenerator.GenerateStructureAction"
+                class="com.skazizul.generator.actions.GenerateStructureAction"
+                text="Generate Spring Boot Structure"
+                description="Generate Controller, Service, Repository and DTO for this entity">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
